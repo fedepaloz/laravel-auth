@@ -18,15 +18,18 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['register'=>false]);
 
 
+
+
 Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function(){Route::get('/','HomeController@index')->name('home');
-
-
-Route::get('/{any}', function(){
-    abort('404');
-})->where("any",".*");
+    
+    Route::resource('posts','PostController');
+    
+    Route::get('/{any}', function(){
+        abort('404');
+    })->where("any",".*");
     
 });
 
 Route::get('{any?}', function () {
-return view('guest.home');
+    return view('guest.home');
 })->where("any",".*");
