@@ -1,9 +1,25 @@
 <template>
-    <div class="content"> 
-                <div class="title m-b-md">
-                    WIP
-                </div>
-    </div>
+  <div class="content">
+    <Placeholder :title="title"></Placeholder>
+    <div class="title m-b-md"></div>
+  </div>
 </template>
 
+ 
+ <script>
+import Placeholder from "./Placeholder.vue";
+export default {
+  name: "App",
+  components: {
+    Placeholder,
+  },
+  data() {
+    return {
+      title: "WIP",
+    };
+  },
+};
+</script>
 
+
+ 
