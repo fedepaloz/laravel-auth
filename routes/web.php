@@ -15,12 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Auth::routes(['register'=>false]);
+ Auth::routes(['register' => false]);
+
+ 
 
 
-
-
-Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function(){Route::get('/','HomeController@index')->name('home');
+Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function() {
+    Route::get('/','HomeController@index')->name('home');
     
     Route::resource('posts','PostController');
     
