@@ -7,10 +7,15 @@
             <label for="title">titolo</label>
             <input type="text" class="form-control" name="title" value="{{ old('title') }}">
 
+
             <div class="form-group">
                 <label for="content">contenuto</label>
+                <input type="text" class="form-control" name="content" value="{{ old('content') }}">
+
+          {{--   <div class="form-group">
+                <label for="content">contenuto</label>
                 <textarea name="content " id="content" required>{{ old('content') }}</textarea>
-            </div>
+            </div> --}}
 {{-- TODO mettere anteprima immagine --}}
             <div class="form-group">
                 <label for="image">immagine</label>
