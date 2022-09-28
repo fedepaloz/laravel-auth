@@ -14,8 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
+        //TODO da ordinare in senso di creazione
         $posts = Post::all();
-        return view('admin.post.index', compact('posts'));
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
