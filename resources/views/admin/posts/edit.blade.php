@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <form action="{{ route('admin.posts.update') }}" method="POST">
+    <form action="{{ route('admin.posts.update', $post) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -13,11 +13,11 @@
                 <label for="content">contenuto</label>
                 <input type="text" class="form-control" name="content" value="{{$post->content}}">
 
-          {{--   <div class="form-group">
+           {{--   <div class="form-group">
                 <label for="content">contenuto</label>
                 <textarea name="content " id="content" required>{{ old('content') }}</textarea>
             </div> --}}
-{{-- TODO mettere anteprima immagine --}}
+             {{-- TODO mettere anteprima immagine --}}
             <div class="form-group">
                 <label for="image">immagine</label>
                 <input type="url" class="form-control" name="image" id="image" value="{{$post->image}}">
