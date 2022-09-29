@@ -33,10 +33,10 @@
                         <option value="">nessuna selezione</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}">
-                                {{ $category->label }}</option>
+                                {{ $category->label }}
+                            </option>
                         @endforeach
                     </select>
                 </div>
     </form>
 @endsection
- 
