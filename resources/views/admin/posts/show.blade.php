@@ -9,7 +9,7 @@
                     <p class="card-text">{{ $post->content }}</p>
                     <div class="col mb-5"><img src="{{ $post->image }}" alt=""></div>
                     <a href="{{ route('admin.posts.index') }}" class="btn btn-primary">Torna alla lista</a>
-                    <a href="#" class="btn btn-primary">modifica</a>
+                    <a href="{{route('admin.posts.edit', $post )}}" class="btn btn-primary">modifica</a>
                     <form action="{{ route('admin.posts.destroy', $post->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
