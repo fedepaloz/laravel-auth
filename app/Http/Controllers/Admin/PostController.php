@@ -5,6 +5,8 @@ use App\Models\Post;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use PhpParser\Node\Expr\New_;
+use App\Models\Category;
 
 class PostController extends Controller
 {
@@ -27,7 +29,10 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        $post= new Post();
+        $categories = Category::all(); 
+        return view('admin.posts.create', compact('post','categories'));
+
     }
 
     /**
@@ -68,8 +73,10 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Post $post)
+    
     {
-        return view('admin.posts.edit', compact('post'));
+        $categories = Category::all();
+        return view('admin.posts.edit', compact('post', 'categories'));
     }
 
     /**

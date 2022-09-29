@@ -23,8 +23,21 @@
             </div>
             <a href="{{ route('admin.posts.index') }}"><button type="button" class="btn btn-primary">torna alla
                     lista</button></a>
-
+                    
+                    
             <button type="submit" class="btn btn-primary">crea post</button>
+
+
+            <div class="form-group mt-3 ">
+                <label for="category_id">seleziona categoria</label>
+                <select class="form-control" id="category_id" name="category_id ">
+                    <option value="">nessuna selezione</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">
+                            {{ $category->label }}</option>
+                    @endforeach
+                </select>
+            </div>
 
     </form>
 @endsection
