@@ -34,14 +34,15 @@
                     <td>
 
                         
-                        <a class="btn btn-sm btn-primary" href="{{ route('admin.posts.show', $post) }}">Vai al dettaglio
-                            <i class="fa-solid fa-magnifying-glass ml-2"></i></a>
+                        <a class="btn btn-sm btn-primary" href="{{ route('admin.posts.show', $post) }}">Vai al        dettaglio 
+                              <i class="fa-solid fa-magnifying-glass ml-2"></i></a>
                             <form action="{{ route('admin.posts.destroy', $post->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger mt-3">cancella post</button>
                                 
                             </form>
+                            <a href="{{ route('admin.posts.edit', $post) }}" class="btn btn-primary">modifica</a>
                             
                         </td>
                         

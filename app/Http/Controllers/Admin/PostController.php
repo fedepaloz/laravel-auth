@@ -90,8 +90,21 @@ class PostController extends Controller
     {
         $data = $request->all();
         $post->update($data);
+
+        
         return redirect()->route('admin.posts.show', $post);
     }
+
+
+/* //PRIMA FAI
+$data = $request->all()
+$category_id = $data['category_id']:
+
+//POI FAI
+$post->update($data);
+$post->category_id = $category_id;
+$post->update(); */
+
 
     /**
      * Remove the specified resource from storage.

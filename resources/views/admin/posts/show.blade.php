@@ -24,9 +24,8 @@
                         <button type="submit" class="btn btn-danger mt-3">cancella post</button>
 
                     </form>
-
-
-                    {{-- immagine da mettere in ordine poiche orribile --}}
+                    
+                    
 
 
                 </div>
